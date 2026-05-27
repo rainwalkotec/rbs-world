@@ -55,6 +55,12 @@ export default function Home() {
           <span className="meta">Открыть картотеку</span>
         </Link>
 
+        <Link className="lore-card" href="/locations">
+          <h3>Локации Эрбеса</h3>
+          <p>Города, таверны, кладбища, чащи, мастерские и тайные места кампании.</p>
+          <span className="meta">Открыть атлас</span>
+        </Link>
+
         <Link className="lore-card" href="/chronicles">
           <h3>Хроники</h3>
           <p>Записи Тёмного века, слухи, пророчества и незавершённые главы.</p>
