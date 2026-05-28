@@ -11,21 +11,21 @@ const locations = [
     y: 43.0,
     danger: "Высокая важность",
     description:
-      "Сердце Королевства Лобия и главный центр королевской власти. Здесь сходятся дороги, слухи, интересы РБС и придворные интриги.",
+      "Сердце Королевства Лобия и главный центр королевской власти. Здесь сходятся дороги, слухи, интересы РБС, дворцовая память и придворные интриги.",
     details:
-      "В Деполе начинаются ключевые события кампании: таверна, королевские поручения, связи Ордена и первые следы раскола внутри РБС.",
+      "В Деполе находятся Дворец-Метрополис, Великий Дом-Маяк, королевская темница, таверна, кладбище и первые следы раскола внутри РБС.",
   },
   {
     id: "bukhin",
     name: "Букин",
-    type: "Лобийское поселение",
+    type: "Северо-восточные владения Лобии",
     x: 58.7,
     y: 34.9,
-    danger: "Умеренно",
+    danger: "Умеренно / школьные земли",
     description:
-      "Поселение внутри зоны королевского влияния, расположенное между центральными землями и восточными областями Лобии.",
+      "Небольшие владения к северо-востоку от Деполя, известные школами, лесными чащами и непоседливыми учениками.",
     details:
-      "Удобная точка для дорожных сцен, слухов о границе и остановок перед движением к Дашфурту или реке.",
+      "Экономика Букина держится на северном торговом пути, соседстве с Деполем и Москией. Раньше в его школах преподавал Трактирщик Мага.",
   },
   {
     id: "dashfurt",
@@ -42,14 +42,14 @@ const locations = [
   {
     id: "chekhgart",
     name: "Чехгарт",
-    type: "Лобийское поселение",
+    type: "Город королевской памяти",
     x: 58.0,
     y: 68.5,
-    danger: "Низко / сюжетно",
+    danger: "Низко / политически важно",
     description:
-      "Важный город Лобии. В лоре связан с детством Бертрана фон Маннгена.",
+      "Город детства Бертрана фон Маннгена, где Король Роза провёл второе посвящение после первого обряда в Деполе.",
     details:
-      "Подходит для личных сцен Бертрана, семейных тайн, кладбищенских историй и лобийской городской атмосферы.",
+      "Из окна дома маленький Бертран видел, как Паладин и Друид хохотали вместе с Королём и разбивали мраморный стул по традиции посвящения.",
   },
   {
     id: "arrawdorf",
@@ -126,26 +126,26 @@ const locations = [
   {
     id: "keram",
     name: "Керам",
-    type: "Амфибианское поселение",
+    type: "Автономный амфибианский город",
     x: 72.1,
     y: 72.3,
-    danger: "Водные земли",
+    danger: "Напряжённо / последствия договора 897 года",
     description:
-      "Поселение у большой реки, связанное с амфибианцами и южными путями.",
+      "Бывшая часть Южных земель за Большой Ворлгой, заселённая в основном амфибианцами после пожаров и переселения.",
     details:
-      "Хорошая точка для рыбаков, речных сцен, философов-амфибианцев и дороги к старым пристаням.",
+      "Керам получил высокую автономию, но бедные земли и разрушенную инфраструктуру. Его история усилила раскол Высших и Низших Амфибианцев.",
   },
   {
-    id: "dushnu",
-    name: "Душну",
-    type: "Прибрежная область",
+    id: "yuzhny",
+    name: "Южный",
+    type: "Речной торговый город",
     x: 73.2,
     y: 58.8,
-    danger: "Погранично",
+    danger: "Торговля / охотничьи земли",
     description:
-      "Область возле реки и восточной стороны Лобии. Может стать перевалочным местом между сушей и водой.",
+      "Когда-то великий город фарфора и мастерских, теперь торговая точка на Большой Ворлге рядом с лесом Шерр-Метт.",
     details:
-      "Подходит для небольших поселений, торговцев, рыбаков и сцен на границе лобийского влияния.",
+      "После отделения Керама Южный потерял большую часть производств и стал менять экономику на торговлю. Осенью здесь проходит охотничий праздник Туресслёт.",
   },
   {
     id: "gangur",
@@ -160,16 +160,26 @@ const locations = [
       "Хорошее место для будущего расширения лора, конфликтов с соседями и новых поселений.",
   },
   {
-    id: "catire",
-    name: "Катире",
-    type: "Северо-восточная область",
+    id: "katua-lands",
+    name: "Земли Катуа",
+    type: "Холмистые земли огров Катуа",
     x: 74.2,
     y: 17.6,
-    danger: "Неизвестно",
+    danger: "Сурово / мало дорог",
     description:
-      "Удалённая область за пределами центральной Лобии. Пока может считаться малоописанной землёй.",
+      "Холмистые массивы и хребты, где огры Катуа живут рядом с редкими человеческими поселениями и стараются не вмешиваться в чужую жизнь.",
     details:
-      "Оставлена как точка для будущих хроник, экспедиций и пограничных слухов.",
+      "До переселения огров здесь лежали земли Димитро — малого северного королевства людей. Сейчас эти места не считаются полноценным государством, но на картах их часто отмечают как владение огров. Самое большое селение, Катуа-тара, известно западным хронистам как Катуа.",
+    landscape: {
+      src: "/images/landscapes/katua-lands.jpg",
+      title: "Хребты и холмы Катуа",
+      note: "Подходит для: Земли Катуа, Катуа-тары, огрские пещеры и каменные идолы",
+    },
+    emblem: {
+      src: "/images/heraldry/katua-arms.png",
+      title: "Герб Земель Катуа",
+      note: "Геральдический знак огров Катуа в лобийской картографической традиции",
+    },
   },
   {
     id: "aquapills",
@@ -198,21 +208,21 @@ const locations = [
   {
     id: "holeskar",
     name: "Млоскар",
-    type: "Озёрная область",
+    type: "Культурно-развлекательная столица Лобии",
     x: 26.0,
     y: 34.5,
-    danger: "Вода и болота",
+    danger: "Болота / городские интриги",
     description:
-      "Озёрная точка на западе карты. Название можно использовать для амфибианских и лесных сцен.",
+      "Западный город прудов, фонтанов, театра, озёрных пристаней, керамского фарфора и иностранной культуры.",
     details:
-      "Подходит для рыбаков, болотных загадок, низших амфибианцев и скрытых проходов.",
+      "Построенный на болотах Млоскар в 790 году ППА стал воротами западной культуры и импорта. Его символы — Стена Стран, амфитеатр «Чайка» и старый город бело-голубых домов на заводях.",
   },
 ];
 
 export default function InteractiveLobiaMap() {
-  const [activeId, setActiveId] = useState("depol");
+  const [activeId, setActiveId] = useState(null);
   const active = useMemo(
-    () => locations.find((location) => location.id === activeId) ?? locations[0],
+    () => locations.find((location) => location.id === activeId) ?? null,
     [activeId]
   );
 
@@ -236,7 +246,6 @@ export default function InteractiveLobiaMap() {
             className={`map-pin ${edgeClass} ${activeId === location.id ? "map-pin-active" : ""}`}
             style={{ left: `${location.x}%`, top: `${location.y}%` }}
             onClick={() => setActiveId(location.id)}
-            onMouseEnter={() => setActiveId(location.id)}
             aria-label={`Открыть описание: ${location.name}`}
           >
             <span className="map-pin-dot" />
@@ -245,6 +254,13 @@ export default function InteractiveLobiaMap() {
               <strong>{location.name}</strong>
               <small>{location.type}</small>
               <em>{location.description}</em>
+              {location.landscape ? (
+                <img
+                  className="map-pin-landscape-thumb"
+                  src={location.landscape.src}
+                  alt={location.landscape.title}
+                />
+              ) : null}
             </span>
           </button>
           );
@@ -252,21 +268,69 @@ export default function InteractiveLobiaMap() {
       </div>
 
       <aside className="map-location-card" aria-live="polite">
-        <span className="map-location-kicker">Выбранная точка</span>
-        <h3>{active.name}</h3>
-        <dl>
-          <div>
-            <dt>Тип</dt>
-            <dd>{active.type}</dd>
-          </div>
-          <div>
-            <dt>Статус</dt>
-            <dd>{active.danger}</dd>
-          </div>
-        </dl>
-        <p>{active.description}</p>
-        <p className="map-location-detail">{active.details}</p>
+        {active ? (
+          <>
+            <span className="map-location-kicker">Выбранная точка</span>
+            <h3>{active.name}</h3>
+            <dl>
+              <div>
+                <dt>Тип</dt>
+                <dd>{active.type}</dd>
+              </div>
+              <div>
+                <dt>Статус</dt>
+                <dd>{active.danger}</dd>
+              </div>
+            </dl>
+            <p>{active.description}</p>
+            <p className="map-location-detail">{active.details}</p>
+            {active.landscape ? (
+              <figure className="map-location-landscape">
+                <img src={active.landscape.src} alt={active.landscape.title} />
+                <figcaption>
+                  <strong>{active.landscape.title}</strong>
+                  <span>{active.landscape.note}</span>
+                </figcaption>
+              </figure>
+            ) : null}
+          </>
+        ) : (
+          <>
+            <span className="map-location-kicker">Картографическая помета</span>
+            <h3>Выбери точку</h3>
+            <p>Наведи курсор на город или область, чтобы увидеть краткую подсказку.</p>
+            <p className="map-location-detail">Нажми на точку, чтобы закрепить подробную запись в этой карточке.</p>
+          </>
+        )}
       </aside>
+
+      {active && (active.emblem || active.landscape) ? (
+        <section className="map-selected-gallery" aria-live="polite">
+          {active.landscape ? (
+            <figure className="map-selected-panel map-selected-panel-landscape">
+              <img src={active.landscape.src} alt={active.landscape.title} />
+              <figcaption>
+                <span className="map-selected-panel-kicker">Ландшафт местности</span>
+                <strong>{active.landscape.title}</strong>
+                <p>{active.landscape.note}</p>
+              </figcaption>
+            </figure>
+          ) : null}
+
+          {active.emblem ? (
+            <figure className="map-selected-panel map-selected-panel-emblem">
+              <div className="map-selected-emblem-wrap">
+                <img src={active.emblem.src} alt={active.emblem.title} />
+              </div>
+              <figcaption>
+                <span className="map-selected-panel-kicker">Геральдика</span>
+                <strong>{active.emblem.title}</strong>
+                <p>{active.emblem.note}</p>
+              </figcaption>
+            </figure>
+          ) : null}
+        </section>
+      ) : null}
     </div>
   );
 }

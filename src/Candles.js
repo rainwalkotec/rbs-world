@@ -10,21 +10,43 @@ export default function Candles() {
   const extinguished = isHome && progress > 0.58;
 
   useEffect(() => {
-    const update = () => {
-      const scrollable = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    let ticking = false;
+
+    const getProgress = () => {
+      const root = document.documentElement;
+      const body = document.body;
+      const fullHeight = Math.max(
+        body.scrollHeight,
+        root.scrollHeight,
+        body.offsetHeight,
+        root.offsetHeight
+      );
+      const scrollable = Math.max(1, fullHeight - window.innerHeight);
       const rawProgress = window.scrollY / scrollable;
-      setProgress(Math.min(1, Math.max(0, rawProgress * 1.65)));
+      return Math.min(1, Math.max(0, rawProgress * 1.65));
     };
 
-    update();
-    window.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
+    const apply = () => {
+      ticking = false;
+      setProgress(isHome ? getProgress() : 0);
+    };
+
+    const requestUpdate = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(apply);
+      }
+    };
+
+    apply();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
 
     return () => {
-      window.removeEventListener("scroll", update);
-      window.removeEventListener("resize", update);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
     };
-  }, []);
+  }, [isHome, pathname]);
 
   const candleStyle = {
     "--candle-scroll": isHome ? progress : 0,
