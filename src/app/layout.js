@@ -26,6 +26,7 @@ export default function RootLayout({ children }) {
               <Link href="/characters-library">Библиотека Персонажей</Link>
               <Link href="/locations">Локации</Link>
               <Link href="/map">Карта</Link>
+              <Link href="/languages">Языки</Link>
               <Link href="/chronicles">Хроники</Link>
             </nav>
           </header>

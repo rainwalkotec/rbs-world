@@ -61,6 +61,12 @@ export default function Home() {
           <span className="meta">Открыть атлас</span>
         </Link>
 
+        <Link className="lore-card" href="/languages">
+          <h3>Языки Эрбеса</h3>
+          <p>Всеобщий, Депольский, Кассифуртский, Тёмное Наречие и древние имена народов.</p>
+          <span className="meta">Открыть словарь</span>
+        </Link>
+
         <Link className="lore-card" href="/chronicles">
           <h3>Хроники</h3>
           <p>Записи Тёмного века, слухи, пророчества и незавершённые главы.</p>
