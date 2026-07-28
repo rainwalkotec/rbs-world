@@ -61,6 +61,12 @@ export default function Home() {
           <span className="meta">Открыть атлас</span>
         </Link>
 
+        <Link className="lore-card" href="/cuisine">
+          <h3>Кухня Эрбеса</h3>
+          <p>Меню Маги и Зины, Керемета и Ильи Лазера с игровыми эффектами еды.</p>
+          <span className="meta">Открыть меню</span>
+        </Link>
+
         <Link className="lore-card" href="/languages">
           <h3>Языки Эрбеса</h3>
           <p>Всеобщий, Депольский, Кассифуртский, Тёмное Наречие и древние имена народов.</p>

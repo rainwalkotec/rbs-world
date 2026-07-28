@@ -4836,3 +4836,439 @@ body.home-atmosphere-active .home-manuscript {
   }
 }
 .avatar-parchment { background: linear-gradient(180deg, rgba(250, 239, 201, 0.92), rgba(177, 134, 72, 0.48)); }
+
+/* Locations atlas full index safety layer */
+.locations-atlas-manuscript {
+  overflow: visible;
+}
+
+.atlas-full-index {
+  position: relative;
+  z-index: 1;
+  margin: clamp(24px, 4vw, 42px) 0 clamp(32px, 5vw, 54px);
+  padding: clamp(20px, 4vw, 34px);
+  background:
+    radial-gradient(circle at 10% 8%, rgba(255, 251, 225, 0.72), transparent 32%),
+    linear-gradient(135deg, rgba(250, 232, 178, 0.86), rgba(212, 181, 113, 0.7));
+  border: 1px solid rgba(95, 61, 25, 0.24);
+  border-radius: 26px;
+  box-shadow: 0 20px 42px rgba(80, 43, 13, 0.12), inset 0 0 0 1px rgba(255,255,255,0.22);
+}
+
+.atlas-full-index::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px dashed rgba(95, 61, 25, 0.18);
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.atlas-full-index-header {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.atlas-full-index-header h2 {
+  color: #4b1615;
+  font-size: clamp(34px, 5vw, 62px);
+}
+
+.atlas-full-index-header p {
+  max-width: 860px;
+  margin: 0;
+  color: #563a25;
+  font-family: var(--font-body) !important;
+  font-size: 16px;
+}
+
+.atlas-full-index-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.atlas-index-chip {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 74px;
+  padding: 10px 12px;
+  color: #2f1a0d;
+  background: rgba(255, 249, 226, 0.68);
+  border: 1px solid rgba(95, 61, 25, 0.2);
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.atlas-index-chip:hover {
+  transform: translateY(-2px);
+  border-color: rgba(123, 74, 22, 0.44);
+  background: rgba(255, 252, 236, 0.88);
+}
+
+.atlas-index-chip span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 44px;
+  color: #f3dc99;
+  background: linear-gradient(180deg, rgba(63, 22, 18, 0.96), rgba(28, 16, 10, 0.96));
+  border-radius: 999px 999px 10px 10px;
+  font-family: var(--font-title);
+  font-size: 22px;
+}
+
+.atlas-index-chip strong {
+  display: block;
+  overflow: hidden;
+  color: #321f13;
+  font-family: var(--font-body) !important;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-index-chip small {
+  display: block;
+  overflow: hidden;
+  margin-top: 3px;
+  color: #7b2a20;
+  font-family: var(--font-body) !important;
+  font-size: 11px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.atlas-entry-card-compact {
+  min-height: 220px;
+}
+
+.atlas-category-sheet-warning {
+  border-color: rgba(123, 40, 28, 0.36);
+}
+
+/* Player character combat stats */
+.player-stats-panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(170px, 240px) 1fr;
+  gap: 14px;
+  margin: -6px 0 24px;
+  padding: 16px;
+  background:
+    linear-gradient(135deg, rgba(66, 34, 17, 0.08), rgba(255, 248, 219, 0.56));
+  border: 1px solid rgba(112, 73, 28, 0.22);
+  border-radius: 22px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.22);
+}
+
+.stats-core {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stats-core div,
+.stat-rune {
+  display: grid;
+  place-items: center;
+  min-height: 74px;
+  padding: 10px;
+  background: rgba(255, 251, 231, 0.58);
+  border: 1px solid rgba(122, 36, 27, 0.18);
+  border-radius: 16px;
+}
+
+.stats-core span,
+.stat-rune span {
+  color: #7a241b;
+  font-family: var(--font-accent);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stats-core strong {
+  color: #2f2117;
+  font-family: var(--font-title);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.stats-attributes {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.stat-rune {
+  min-height: 74px;
+}
+
+.stat-rune strong {
+  color: #2f2117;
+  font-family: var(--font-title);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.stats-notes {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stats-notes li {
+  position: relative;
+  padding-left: 20px;
+  color: #4c3421;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.stats-notes li::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  background: #7a241b;
+  border-radius: 50%;
+}
+
+.avatar-gold {
+  background: linear-gradient(180deg, rgba(255, 239, 170, 0.92), rgba(197, 134, 45, 0.58));
+}
+
+@media (max-width: 900px) {
+  .player-stats-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-attributes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .stats-core,
+  .stats-attributes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Cuisine archive */
+.cuisine-manuscript {
+  overflow: visible;
+}
+
+.cuisine-header .lead {
+  max-width: 980px;
+}
+
+.cuisine-rules-panel {
+  position: relative;
+  margin: 28px 0;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(83, 39, 20, 0.1), rgba(255, 245, 209, 0.72)),
+    radial-gradient(circle at top left, rgba(142, 65, 27, 0.15), transparent 34%);
+  border: 1px solid rgba(110, 70, 32, 0.28);
+  border-radius: 26px;
+  box-shadow: 0 18px 40px rgba(40, 22, 12, 0.12), inset 0 0 0 1px rgba(255,255,255,0.28);
+}
+
+.cuisine-rules-panel h2 {
+  margin: 6px 0 16px;
+  color: #311d11;
+  font-family: var(--font-title);
+  font-size: clamp(28px, 4vw, 46px);
+}
+
+.cuisine-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cuisine-rules-grid p {
+  margin: 0;
+  padding: 14px 16px;
+  color: #442d1c;
+  background: rgba(255, 251, 232, 0.62);
+  border: 1px solid rgba(123, 74, 22, 0.2);
+  border-radius: 18px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.cuisine-ledger {
+  display: grid;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.cuisine-tavern-card {
+  position: relative;
+  padding: clamp(22px, 3vw, 34px);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 222, 0.92), rgba(234, 209, 158, 0.5)),
+    radial-gradient(circle at top right, rgba(123, 34, 24, 0.1), transparent 36%);
+  border: 1px solid rgba(92, 57, 25, 0.3);
+  border-radius: 30px;
+  box-shadow: 0 24px 60px rgba(38, 20, 9, 0.14), inset 0 0 0 1px rgba(255,255,255,0.24);
+}
+
+.cuisine-tavern-head {
+  display: grid;
+  grid-template-columns: 1fr minmax(190px, 300px);
+  gap: 18px;
+  align-items: start;
+  border-bottom: 1px solid rgba(101, 62, 27, 0.18);
+  padding-bottom: 18px;
+}
+
+.cuisine-tavern-head h2 {
+  margin: 4px 0 6px;
+  color: #2c1a10;
+  font-family: var(--font-title);
+  font-size: clamp(30px, 4vw, 54px);
+}
+
+.cuisine-tavern-head p,
+.cuisine-mood {
+  margin: 0;
+  color: #5c3921;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.cuisine-tavern-head strong {
+  display: block;
+  padding: 14px 16px;
+  color: #f6e1ac;
+  background: linear-gradient(180deg, rgba(82, 28, 21, 0.96), rgba(42, 21, 13, 0.96));
+  border-radius: 18px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.cuisine-mood {
+  margin: 18px 0;
+  font-weight: 800;
+}
+
+.cuisine-rule-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cuisine-rule-list span {
+  padding: 8px 11px;
+  color: #3e2a1b;
+  background: rgba(255, 252, 236, 0.66);
+  border: 1px solid rgba(126, 74, 27, 0.22);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.cuisine-effects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 14px;
+  margin: 20px 0 26px;
+}
+
+.cuisine-effect-card,
+.cuisine-menu-section {
+  padding: 16px;
+  background: rgba(255, 252, 236, 0.66);
+  border: 1px solid rgba(108, 62, 20, 0.2);
+  border-radius: 20px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.2);
+}
+
+.cuisine-effect-card h4,
+.cuisine-menu-section h4 {
+  margin: 4px 0 12px;
+  color: #59231b;
+  font-family: var(--font-title);
+  font-size: 28px;
+}
+
+.cuisine-effect-card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #3d2818;
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.cuisine-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.cuisine-dish-list {
+  display: grid;
+  gap: 10px;
+}
+
+.cuisine-dish {
+  padding: 12px 13px;
+  background: rgba(255, 248, 218, 0.7);
+  border: 1px solid rgba(95, 52, 19, 0.16);
+  border-radius: 16px;
+}
+
+.cuisine-dish strong {
+  display: block;
+  color: #2f1f14;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.cuisine-dish p {
+  margin: 6px 0 0;
+  color: #634225;
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .cuisine-rules-grid,
+  .cuisine-tavern-head {
+    grid-template-columns: 1fr;
+  }
+}

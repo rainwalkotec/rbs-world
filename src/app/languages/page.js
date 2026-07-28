@@ -16,6 +16,9 @@ const columns = [
   ["demonic", "Демонический"],
   ["moscian", "Москийский"],
   ["kalatonian", "Калатонский"],
+  ["sumarokkan", "Сумарокканский"],
+  ["urk", "Уркский"],
+  ["troll", "Тролльский"],
 ];
 
 export default function LanguagesPage() {

@@ -80,6 +80,42 @@ function Abilities({ abilities }) {
   );
 }
 
+function StatsPanel({ stats }) {
+  if (!stats) return null;
+
+  return (
+    <section className="player-stats-panel" aria-label="Боевые параметры персонажа">
+      <div className="stats-core">
+        <div>
+          <span>ХП</span>
+          <strong>{stats.hp}</strong>
+        </div>
+        <div>
+          <span>Защита</span>
+          <strong>{stats.defense}</strong>
+        </div>
+      </div>
+
+      <div className="stats-attributes">
+        {stats.attributes.map(([label, value]) => (
+          <div className="stat-rune" key={label}>
+            <span>{label}</span>
+            <strong>{value}</strong>
+          </div>
+        ))}
+      </div>
+
+      {stats.notes && stats.notes.length > 0 ? (
+        <ul className="stats-notes">
+          {stats.notes.map((note) => (
+            <li key={note}>{note}</li>
+          ))}
+        </ul>
+      ) : null}
+    </section>
+  );
+}
+
 function HiddenInfo({ character }) {
   const hidden = character.hiddenInfo || [];
 
@@ -153,6 +189,7 @@ export default function PlayerCharactersPage() {
             </header>
 
             <MetaGrid items={character.meta} />
+            <StatsPanel stats={character.stats} />
 
             <div className="player-dossier-layout">
               <div className="player-dossier-maincol">
